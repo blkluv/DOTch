@@ -2,6 +2,10 @@
 
 **A Fair and Transparent Dutch Auction Platform for Token Launches on Polkadot**
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/48e76a8a-c406-410b-ac90-91c53df6bd54" width="500" style="margin: 20px 0;" alt="DOTch Auction Logo"/>
+</p>
+
 ---
 
 ## 🌐 What is DOTch_Auction?
