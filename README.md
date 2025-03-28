@@ -59,6 +59,13 @@ DOTch_Auction introduces an **on-chain Dutch auction model** where:
 
 ---
 
+## UI
+
+![image](https://github.com/user-attachments/assets/daa24b66-651b-4d16-8254-928025d4262a)
+![image](https://github.com/user-attachments/assets/046eb91c-6cb3-4346-b193-4529413b0e4e)
+![image](https://github.com/user-attachments/assets/180d1084-d7f8-4ffc-9594-04971db79c4a)
+
+
 ## 🔐 Why Dutch Auctions on Polkadot?
 
 - ⛽ **No gas wars** (thanks to Polkadot's low-fee architecture)  
