@@ -1,6 +1,5 @@
-import { configureChains, createConfig, WagmiConfig } from 'wagmi';
+import { configureChains, createConfig } from 'wagmi';
 import { publicProvider } from 'wagmi/providers/public';
-import { RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import { metaMaskWallet } from '@rainbow-me/rainbowkit/wallets';
 import { connectorsForWallets } from '@rainbow-me/rainbowkit';
 
@@ -33,7 +32,12 @@ const { chains, publicClient } = configureChains(
 const connectors = connectorsForWallets([
   {
     groupName: 'Recommended',
-    wallets: [metaMaskWallet({ projectId: 'd62a0b707c792b8c5bf447a96d5e8604', chains })],
+    wallets: [
+      metaMaskWallet({
+        projectId: 'd62a0b707c792b8c5bf447a96d5e8604',
+        chains,
+      }),
+    ],
   },
 ]);
 
@@ -44,6 +48,3 @@ const config = createConfig({
 });
 
 export { config, chains };
-  }],
-  ssr: true,
-});
