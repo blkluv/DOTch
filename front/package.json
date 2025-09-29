@@ -8,16 +8,13 @@
     "start": "next start"
   },
   "dependencies": {
-    "@polkadot/api": "^15.8.1",
-    "@polkadot/extension-dapp": "^0.58.6",
-    "@rainbow-me/rainbowkit": "^2.2.4",
-    "@tanstack/react-query": "^5.55.3",
+    "@polkadot/api": "^15.10.2",
+    "@polkadot/extension-dapp": "^0.58.10",
     "ethers": "^6.13.5",
     "next": "^15.1.4",
+    "qr": "^0.5.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "viem": "2.23.3",
-    "wagmi": "^2.14.11"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.14.8",

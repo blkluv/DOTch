@@ -1,7 +1,6 @@
-import { configureChains, createConfig } from 'wagmi';
+import { configureChains, createClient } from 'wagmi';
 import { publicProvider } from 'wagmi/providers/public';
-import { metaMaskWallet } from '@rainbow-me/rainbowkit/wallets';
-import { connectorsForWallets } from '@rainbow-me/rainbowkit';
+import { MetaMaskConnector } from 'wagmi/connectors/metaMask';
 
 const assetHubWestend = {
   id: 420420421,
@@ -14,7 +13,6 @@ const assetHubWestend = {
   },
   rpcUrls: {
     default: { http: ['https://westend-asset-hub-eth-rpc.polkadot.io'] },
-    public: { http: ['https://westend-asset-hub-eth-rpc.polkadot.io'] },
   },
   blockExplorers: {
     default: {
@@ -24,27 +22,18 @@ const assetHubWestend = {
   },
 };
 
-const { chains, publicClient } = configureChains(
+const { chains, provider, webSocketProvider } = configureChains(
   [assetHubWestend],
   [publicProvider()]
 );
 
-const connectors = connectorsForWallets([
-  {
-    groupName: 'Recommended',
-    wallets: [
-      metaMaskWallet({
-        projectId: 'd62a0b707c792b8c5bf447a96d5e8604',
-        chains,
-      }),
-    ],
-  },
-]);
-
-const config = createConfig({
+const client = createClient({
   autoConnect: true,
-  connectors,
-  publicClient,
+  connectors: [
+    new MetaMaskConnector({ chains })
+  ],
+  provider,
+  webSocketProvider,
 });
 
-export { config, chains };
+export { client, chains };

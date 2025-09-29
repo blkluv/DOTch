@@ -1,4 +1,3 @@
-import { ConnectButton } from '@rainbow-me/rainbowkit';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
@@ -71,7 +70,7 @@ const Home: NextPage = () => {
             >
               Create Auction
             </button>
-            <ConnectButton />
+            {/* Removed ConnectButton - you can add a basic wallet connect later */}
           </div>
         </div>
 

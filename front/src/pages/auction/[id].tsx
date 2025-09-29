@@ -2,7 +2,6 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import styles from '../../styles/AuctionDetail.module.css';
-import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 interface Auction {
   id: number;
@@ -127,7 +126,7 @@ const AuctionDetail = () => {
           >
             ← Back to Auctions
           </button>
-          <ConnectButton />
+          {/* Removed ConnectButton - you can add a basic wallet connect later */}
         </div>
 
         <div className={styles.auctionDetail}>
@@ -227,4 +226,4 @@ const AuctionDetail = () => {
   );
 };
 
-export default AuctionDetail; 
+export default AuctionDetail;
